@@ -55,5 +55,16 @@ public class Main {
         System.out.println(taskManager.getAllTasks());
         System.out.println(taskManager.getAllEpics());
         System.out.println(taskManager.getAllSubtasks());
+
+        System.out.println();
+        System.out.println("-".repeat(20));
+        System.out.println();
+
+        taskManager.clearAllTasks();
+        taskManager.clearAllEpics();
+        taskManager.clearAllSubtasks();
+        System.out.println(taskManager.getAllTasks());
+        System.out.println(taskManager.getAllEpics());
+        System.out.println(taskManager.getAllSubtasks());
     }
 }
