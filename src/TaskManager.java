@@ -81,7 +81,7 @@ public class TaskManager {
         }
 
         Epic epic = epics.get(subtask.getEpicId());
-        if (epic == null || epic.getSubtasksId().contains(subtask.getId())) {
+        if (epic == null || !epic.getSubtasksId().contains(subtask.getId())) {
             return null;
         }
 
@@ -109,7 +109,7 @@ public class TaskManager {
         if (removed != null) {
             Epic epic = epics.get(removed.getEpicId());
             if (epic != null) {
-                epic.getSubtasksId().remove(removed.getId());
+                epic.getSubtasksId().remove((Integer) id);
                 updateEpicStatus(epic);
             }
         }
